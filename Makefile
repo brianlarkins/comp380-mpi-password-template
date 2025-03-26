@@ -1,6 +1,6 @@
 CC=gcc
 MPICC=mpicc
-CFLAGS=-Wno-unused-parameter -Wno-format-overflow -Wall -Wextra -Werror -g -O3 -msse4.2
+CFLAGS=-Wno-stringop-overflow -Wno-unused-parameter -Wno-format-overflow -Wall -Wextra -Werror -g -O3 -msse4.2
 
 all: crypter lab4
 
