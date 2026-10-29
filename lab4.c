@@ -6,6 +6,10 @@
 #include <mpi.h>
 #include <openssl/des.h>
 
+/* DES_crypt is deprecated in OpenSSL 3 but still works; this keeps -Werror
+   from stopping your build once you start calling it. */
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 
 int main(int argc, char **argv) {
   double start, end;
